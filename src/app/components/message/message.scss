@@ -1,0 +1,177 @@
+.message-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  min-width: 400px;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.message-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.message-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%) translateY(-20px);
+}
+
+.message-content {
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.message-icon {
+  margin-right: 12px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.message-title {
+  margin: 0;
+  flex: 1;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.message-close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.message-close:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.message-body {
+  padding: 0 20px 16px 56px;
+  margin: 0;
+}
+
+.message-body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Success Message */
+.message-success {
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+}
+
+.message-success .message-header {
+  background-color: #28a745;
+  color: white;
+}
+
+.message-success .message-icon {
+  background-color: white;
+  color: #28a745;
+}
+
+/* Warning Message */
+.message-warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffeaa7;
+  color: #856404;
+}
+
+.message-warning .message-header {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.message-warning .message-icon {
+  background-color: #212529;
+  color: #ffc107;
+}
+
+/* Error Message */
+.message-error {
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  color: #721c24;
+}
+
+.message-error .message-header {
+  background-color: #dc3545;
+  color: white;
+}
+
+.message-error .message-icon {
+  background-color: white;
+  color: #dc3545;
+}
+
+/* Info Message */
+.message-info {
+  background-color: #d1ecf1;
+  border: 1px solid #bee5eb;
+  color: #0c5460;
+}
+
+.message-info .message-header {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.message-info .message-icon {
+  background-color: white;
+  color: #17a2b8;
+}
+
+/* Icons */
+.icon-success::before {
+  content: "✓";
+  font-weight: bold;
+}
+
+.icon-warning::before {
+  content: "!";
+  font-weight: bold;
+}
+
+.icon-error::before {
+  content: "✕";
+  font-weight: bold;
+}
+
+.icon-info::before {
+  content: "i";
+  font-weight: bold;
+  font-style: italic;
+}
